@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Montserrat|Pacifico|Roboto+Slab&display=swap');
+* {
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+/*-----------Estilos Base------------------*/
+img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6{
+	margin: 0; /* con esta linea se fija un margen para los titulos, pero podria no ser necesario en otros casos*/
+}
+
+.container {
+	width: 100%;
+	margin: auto;
+}
+.container--flex {
+	display: flex;
+	flex-wrap: wrap; /*es para que los elemento que no entren se vayan hacia abajo*/
+	justify-content: space-between; /*Sirve para alinear en el eje principal que por defecto es horizontal*/
+	align-items: center; /*para alinear de manera vertical*/
+
+}
+.column{
+	width: 100%;
+}
+/*-----------Estilos del HEADER------------------*/
+.main-header{
+	width: 100%;
+}
+.logo{
+	font-size: 1.8em;
+	color: #000033;
+	padding: 10px;
+	font-family: 'Pacifico', cursive;
+	font-weight: 100;
+}
+
+.main-header__contactInfo__phone{
+	background: #ffcc00;
+	color: white;
+	margin: 0 auto;
+	padding: 5px;
+}
+.main-header__contactInfo__address{
+	padding: 10px;
+	margin: 0;
+}
+.main-header [class*="icon-"]:before {
+	position: relative;
+	top: 2px;
+	right: 5px;
+}
+
+/*--------------------------Estilos del menu --------------*/
+
+
+.main-nav {
+	width: 100%;
+	position: relative;
+	z-index: 2000;
+	padding: 10px;
+}
+
+.icon-menu { /*-posicion del icono del menu tamaño y color-*/
+	display: block;
+	color: white;
+	border: 1px solid white;
+	border-radius: 3px;
+	width: 40px;
+	height: 40px;
+	line-height: 45px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 1.5em;
+}
+
+.social-icon{
+	display: flex;
+	justify-content: space-between;
+}
+
+ .social-icon [class*="icon-"]{
+ 	color: black;
+ 	margin-left: 10px;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	font-size: 1.3em;
+ 	width: 35px;
+ 	height: 35px;
+ 	background: white;
+ 	border-radius: 50%;
+ }
+
+  .social-icon__link{
+ 	text-decoration: none; /*Quita el subrayado de los iconos de FB TW Y Youtube*/
+
+ }
+
+ .menu {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	background: rgba(0,0,0,.50);
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	height: 0;
+	overflow: hidden;
+	transition: height .3s linear;
+
+}
+.menu__link {
+	display: block;
+	padding: 13px;
+	color: white;
+	text-decoration: none;
+}
+
+.menu__link:hover { /*-esta linea pinda de color el menu cuando el cursor pasa sobre la opcion-*/
+	background: #ffcc00;
+}
+.menu__link--select {
+	background: #ffcc00;
+}
+.mostrar {/*-Define el tamaño de la casilla de el menu desplegable*/
+	height: 190px;
+}
+
+/*--------------------------Estilos del BANNER--------------*/
+
+.banner {
+	margin-top: -55px;
+	position: relative;
+}
+
+.banner:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0);
+	z-index: 1000;
+	top: 0;
+}
+.banner__img {
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+}
+.banner__content {/*---Letras contenidas dentro de la imagen Banner----*/
+
+	width: 90%;
+	color: white;
+	text-align: center;
+	position: absolute;
+	z-index: 1500;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%); /*---Letras centradas dentro del banner---*/
+	font-size: 1.5em;
+	font-weight: bold;
+}
+/*-------------Estilos PRINCIPALES DE LA PAGINA--------------*/
+
+.group--color .container {
+	background: #ffcc00;
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+.main__title{
+	margin: 15px 0;
+	font-size: 1.8em;
+	font-family: "Pacifico", cursive;
+	font-weight: 100;
+}
+.main__txt{
+	padding: 20px;
+}
+.column__title{
+	font-size: 1.3;
+}
+
+.main__about__description .column:nth-child(2){
+	padding: 10px;
+}
+.btn{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	width: 120px;
+	background: #ffcc00;
+	color: white;
+	padding: 10px;
+	margin: 10px auto;
+}
+
+.group__title{
+	font-family: "Pacifico", cursive;
+	text-align: center;
+	font-weight: 100;
+	font-size: 1.8em;
+	margin: 30px;
+}
+
+/*-------------Estilos del FOOTER--------------*/
+
+.main-footer{
+	background: #222;
+	color: lightyellow;
+	padding: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: .8em;
+}
+
+.copy{
+	text-align: center;
+	margin: auto;
+	margin-top: 15px;
+}
+
+.main-footer [class*="icon-"] {
+	color: lightyellow;
+	text-decoration: none;
+}
+.main-footer [class*="icon-"]:before {
+	position: relative;
+	top: 5px;
+	right: 5px;
+}
+
+/*-------------Estilo responsive ----------------*/
+@media screen and (min-width:480px) {
+	.container {
+		width: 1000px; /*esta linea hace que el contenido se separe de los margenes y quede centrado*/
+	}
+	.logo {
+		color: lightyellow;
+	}
+	.main-header__contactInfo {
+		text-align: right;
+	}
+
+	.main-header__contactInfo__phone {
+		background: none;
+	}
+	.main-header__contactInfo__address {
+		color: white;
+	}
+
+	.main-nav{
+		background: rgba(0,0,0,0.5);
+	}
+	.banner {
+		margin-top: -170px;
+		z-index: -1000;
+	}
+	.banner__img{
+		height: 600px;
+	}
+
+	.banner__content {
+		font-size: 2em;
+	}
+	.main{
+		padding-bottom: 30px;
+	}
+
+	.main__about__description .column:nth-child(2) {
+		padding-left: 20px;
+		font-size: .9em;
+	}
+	.main__about__description .btn {
+		margin: 0;
+	}
+	.main-footer .container--flex {
+		align-items: flex-start; /* esta linea alinea el contenido del pie de pagina todos los datos se alinian de las 3 columnas*/
+	}
+	.column--50 {
+		width: 49%;
+	}
+	.column--50-25{
+		width: 49%;
+	}
+	.column--33 {
+		width: 33%;
+	}
+}
+@media screen and (min-width:768px){
+	.main__title{
+		font-size: 2.2em;
+	}
+	.main__about__description {
+		margin-top: 30px;
+	}
+	.main__about__description .column--50:nth-child(2){
+		font-size: 1em;
+	}
+	.main__about__description .column--50:nth-child(2) .column__txt {
+		line-height: 30px; /*esta linea sirve para darle espacio al interlineado del contenido de column__txt hace los parrafos mas grandes y espaciados*/
+	}
+	.column--50-25 {
+		width: 24.5%;
+	}
+
+
+}
+
+@media screen and (min-width:1024px){
+	.container {
+		width: 1000px; /*esta linea hace que el contenido se separe de los margenes y quede centrado*/
+	}
+
+	.logo {
+		font-size: 2em;
+		padding: 0;
+	}
+	.main-header__contactInfo__phone, .main-header__contactInfo__address {
+		padding-right: 0;
+		font-size: 1.15em;
+	}
+
+	.main-nav {
+		padding: 0;
+	}
+	.banner__img {
+		height: 700px;
+	}
+
+	.banner__content {/*Hace el contenido que esta dentro de la imagen banner mas grande*/
+		font-size: 2.5em;
+	}
+	.icon-menu {/*Hace desaparecer el icono del menu*/
+		display: none;
+	}
+	.menu {
+		position: static;
+		display: flex;
+		height: auto;
+		width: auto;
+	}
+	.menu__link {
+		padding: 15px;
+	}
+	.group--color .container {/* en esta parte le da espacio ariba y abajo al segundo titulo*/
+		margin-top: 30px;
+		margin-bottom: 30px;
+		padding: 20px;
+	}
+	.main__title {
+		font-size: 2.3em;
+	}
+	.main__about__description .column--50:nth-child(2) .column__txt {
+		line-height: 20px;
+	}
+	.main-footer {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.container {
+		width: 1400px;
+	}
+
+	.main__about__description .column:nth-child(1) img {
+		width: 100%;
+		height: 350px;
+		object-fit: cover;
+	}
+
+}

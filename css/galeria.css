@@ -1,0 +1,59 @@
+.gallery__img {
+	object-fit: cover; /*Ayuda a que las imagenes no se estiren*/
+	margin-bottom: 10px; /*crea una separacion entre las imagenes de la galeria*/
+	cursor: pointer; /* Cuando el cursor pasa por la imagen esta tiene un leve movimiento*/
+	transition: all 0.5s;/*crea efecto cuando aumenta de tamañano la imagen cuando el cursos pasa por encima*/
+}
+
+.gallery__img:hover {
+	transform: scale(1.02); /*Aumenta el tamaño de la imagen cuando el cursor pasa sobre ella*/
+}
+
+.gallery__img--big {
+	height: 400px;
+}
+
+.gallery__img__small {
+	height: 200px;
+}
+
+.modal{
+	width: 100%;
+	min-height: 100vh;
+	background: rgba(0,0,0,0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100000; /*posicion de la imagen frente al menu*/
+	display: none;
+}
+
+.modal__content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.modal__img {
+	width: 50%;
+}
+
+.modal__boton {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: white;
+	cursor: pointer;
+	font-weight: bold;
+	width: 30px;/* ancho y alto del circulo contenedor de la X*/
+	height: 30px;
+	line-height: 30px; /*pisicion de la X en el circulo*/
+	background: #FA8072;
+	font-size: 1.5em; /* tamaño de la letra*/
+	text-align: center;
+	border-radius: 50%;
+	font-family: monospace;
+}
+.modal--open {
+	display: block;
+}
